@@ -117,9 +117,9 @@ devweb:
     - db:db
   ports:
     # for django test server
-    - "51202:8080"
+    - "41202:8080"
     # for ssh
-    - "51203:22"
+    - "41203:22"
 
 btsync-db:
   # BTSync backups for database dumps
