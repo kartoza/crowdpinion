@@ -29,18 +29,12 @@ def handler500(request):
     })))
 
 urlpatterns = [
-    #url(r'^site-admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
     url(r'^', include('base.urls')),
-    #url(r'^grappelli/', include('grappelli.urls')),
+    url(r'^grappelli/', include('grappelli.urls')),
     #url(r'^accounts/', include('allauth.urls')),
 ]
 
-if settings.DEBUG:
-    urlpatterns.append(
-       static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))
-    urlpatterns.append(
-        static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    )
 
 
 

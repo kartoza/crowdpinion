@@ -1,0 +1,20 @@
+.info {
+    margin-top: 10%
+}
+
+.message-banner {
+}
+
+.answers-collected {
+    margin-top: 50px;
+}
+
+.answer-item {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16pt;
+    border: 1px solid cadetblue;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}

@@ -8,7 +8,7 @@ from .utils import absolute_path
 
 ADMINS = (
     ('Tim Sutton', 'tim@kartoza.com'),
-    ('Christiaan van der Merwe', 'christiaan@kartoza.com'),
+    ('Anita Hapsari', 'anita@kartoza.com'),
 )
 
 MANAGERS = ADMINS
@@ -83,6 +83,7 @@ TEMPLATES = [
         'DIRS': [
             # project level templates
             absolute_path('core', 'base_templates'),
+            absolute_path('base', 'templates'),
         ],
         'APP_DIRS': False,
         'OPTIONS': {
@@ -107,15 +108,15 @@ TEMPLATES = [
     },
 ]
 
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
 
 ROOT_URLCONF = 'core.urls'
 

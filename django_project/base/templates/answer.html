@@ -1,0 +1,26 @@
+{% extends "main_base.html" %}
+{% load staticfiles %}
+
+{% block css_head %}
+    <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+{% endblock css_head %}
+
+{% block content %}
+    <div style="margin-top: 10%;">
+        <center><h1>{{ question }}</h1></center>
+        <center><h3 style="margin-top: 30px;">Submit you answer!</h3></center>
+        <form method="post">
+            {% csrf_token %}
+            <center><input name="answer"></center>
+            <center><input class="btn btn-danger btn-submit" type="button" value="Submit!" onclick="addAnswer(); return false"></center>
+        </form>
+    </div>
+    <center><div class="answer-wrapper">
+
+    </div></center>
+    <script>
+        var answerUrl = '{% url 'add-answers' question_id %}';
+        var csrfToken = '{{ csrf_token }}';
+    </script>
+    <script src="{% static 'js/answer.js' %}"></script>
+{% endblock %}

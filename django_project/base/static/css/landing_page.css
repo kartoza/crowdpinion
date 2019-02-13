@@ -1,0 +1,26 @@
+label {
+    display: none;
+}
+
+input[name=question], input[name=answer] {
+    font-size: 20px;
+    width: 500px;
+}
+
+.answer-wrapper {
+    margin-top: 50px;
+}
+
+.btn-submit {
+    margin-top: 10px;
+}
+
+.answer-item {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16pt;
+    border: 1px solid cadetblue;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}

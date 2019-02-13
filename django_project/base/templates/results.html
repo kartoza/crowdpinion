@@ -1,0 +1,36 @@
+{% extends "main_base.html" %}
+{% load staticfiles %}
+
+{% block css_head %}
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+{% endblock css_head %}
+
+{% block content %}
+    {% if messages %}
+        <div class="messages message-banner">
+            {% for message in messages %}
+            <center><h2{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                {{ message }}
+            </h2></center>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <div class="info">
+        <center><h3>Ask your crowd to go here to share their thoughts:</h3></center>
+        <center><h5><a href="{{ current_site }}">{{ current_site }}</a></h5></center>
+
+        <center><h3>Your question:</h3></center>
+        <center><h2>{{ questionnaire.question }}</h2></center>
+        <center><h3>Answers collected:</h3></center>
+
+        <center><div class="answers-collected"></div></center>
+
+    </div>
+    <div class="result-items"></div>
+
+    <script>
+        var getAnswerUrl = '{% url "get-answers" questionnaire.unique_id %}'
+    </script>
+    <script src="{% static 'js/results.js' %}"></script>
+{% endblock %}

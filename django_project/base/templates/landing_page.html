@@ -1,0 +1,17 @@
+{% extends "main_base.html" %}
+{% load staticfiles %}
+
+{% block css_head %}
+    <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+{% endblock css_head %}
+
+{% block content %}
+    <div style="margin-top: 10%;">
+        <center><h1>Create a Question!</h1></center>
+        <form method="post">
+            {% csrf_token %}
+            <center>{{ form.as_p }}</center>
+            <center><input class="btn btn-danger" type="submit" value="Let's do this!"></center>
+        </form>
+    </div>
+{% endblock %}

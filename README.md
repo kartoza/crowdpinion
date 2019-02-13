@@ -1,14 +1,14 @@
-# FORD3 
+# CROWDPINION 
 
-[![FORD Screenshot](http://crowdpinionscreenshoturl)](http://crowdpinionproductionurl)
+(http://crowdpinionscreenshoturl)](http://crowdpinionproductionurl)
 
 
-A django app for creating publishing open education programm data for South Africa. 
+A django app for questionnaire. 
 
 View a running instance at [http://crowdpinionproductionurl](http://crowdpinionproductionurl)
 
 
-Note that whilst usable, Crowdpinion is under continual development and not
+Note that whilst usable, CrowdPinion is under continual development and not
 yet feature complete.
 
 The latest source code is available at 
@@ -20,8 +20,7 @@ The latest source code is available at
 
 ## Key features
 
-* An clean, easy to use API for discovering courses, institutions etc. from educational facilities in South Africa
-* A backend administration system for educational institutions to maintain their own data
+* An clean, easy to use app to ask questions and get immediate answer from participants
 
 ## Project activity
 
@@ -45,7 +44,7 @@ Story queue on Waffle:
 ## Quick Installation Guide
 
 For deployment we use [docker](http://docker.com) so you need to have docker 
-running on the host. Crowdpinion is a django app so it will help if you have
+running on the host. CrowdPinion is a django app so it will help if you have
 some knowledge of running a django site.
 
 ```
@@ -115,7 +114,7 @@ and community members using the link below.
 ## Credits
 
 Crowdpinion was developed by [Kartoza.com](http://kartoza.com) and 
-individual contributors. The project is funded by the [Ford Foundation](http://fordfoundation.org).
+individual contributors.
 
 ## License
 
@@ -143,9 +142,5 @@ all necessary servicing, repair or correction.
 Thank you to the individual contributors who have helped to build crowdpinion:
 
 * Tim Sutton (Lead developer): tim@kartoza.com
-* Dražen Odobašić : dodobas@geoinfo.geof.hr
-* George Irwin : github@grvhi.com
-* Ismail Sunni : ismail@kartoza.com
-* Richard Duivenvoorde : richard@duif.net
-* Rischan Mafrur
+* Anita Hapsari : anita@kartoza.com
 
