@@ -32,7 +32,7 @@
 
     </div>
     <div class="result-items"></div>
-	<center><div><a href="{% url "results" questionnaire.unique_id %}">Download Results</a></div></center>
+	<center><div><a href="{% url "answers-as-text" questionnaire.unique_id %}">Download Results</a></div></center>
 
     <script>
         var getAnswerUrl = '{% url "get-answers" questionnaire.unique_id %}'
