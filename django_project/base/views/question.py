@@ -1,4 +1,5 @@
 # coding=utf-8
+from django.http import HttpResponse
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, DetailView, TemplateView
 from django.urls import reverse_lazy
@@ -61,6 +62,14 @@ class AnswersAsTextView(TemplateView):
     """View for answers as plain text."""
 
     template_name = 'answers_as_text.txt'
+
+    # Override the TemplateView get method so it returns the file download
+    def get(self, request, *args, **kwargs):
+        # Create the HttpResponse object with the appropriate CSV header.
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="answers.txt"'
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context)
 
     def get_context_data(self, **kwargs):
         context = super(AnswersAsTextView, self).get_context_data(**kwargs)

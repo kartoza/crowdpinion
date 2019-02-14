@@ -1,4 +1,4 @@
 {% for answer in answers %}
-{{ answer }}
+{{ answer }}\n
 {% endfor %}
 
