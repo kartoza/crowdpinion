@@ -9,10 +9,10 @@
     <div style="margin-top: 10%;">
         <center><h1>{{ question }}</h1></center>
         <center><h3 style="margin-top: 30px;">Submit you answer!</h3></center>
-        <form method="post" action="">
+        <form method="post" action="" onsubmit="addAnswer(); return false;">
             {% csrf_token %}
             <center><input name="answer"></center>
-            <center><input class="btn btn-danger btn-submit" type="submit" value="Submit!" onsubmit="addAnswer(); return false"></center>
+            <center><input class="btn btn-danger btn-submit" type="button" value="Submit!" onclick="addAnswer(); return false"></center>
         </form>
     </div>
     <center><div class="answer-wrapper">
