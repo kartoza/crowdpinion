@@ -8,6 +8,7 @@
 # See accompanying Make commands for easy collectstatic etc.
 
 smtp:
+  container_name: crowdpinion-smtp
   image: catatnight/postfix
   hostname: postfix
   environment:
@@ -17,6 +18,7 @@ smtp:
   restart: unless-stopped
 
 db:
+  container_name: crowdpinion-db
   image: kartoza/postgis:9.6-2.4
   volumes:
     #- ./pg/postgres_data:/var/lib/postgresql
@@ -31,6 +33,7 @@ db:
 #    - "25432:5432"
 
 uwsgi:
+  container_name: crowdpinion-uwsgi
   build: docker
   hostname: uwsgi
   environment:
@@ -38,7 +41,7 @@ uwsgi:
     - DATABASE_USERNAME=docker
     - DATABASE_PASSWORD=docker
     - DATABASE_HOST=db
-    - DJANGO_SETTINGS_MODULE=core.settings.prod_docker
+    - DJANGO_SETTINGS_MODULE=core.settings.dev_docker
     - VIRTUAL_HOST=crowdpinion.kartoza.com
     - VIRTUAL_PORT=8080
   volumes:
@@ -54,6 +57,7 @@ uwsgi:
   user: root
 
 dbbackups:
+  container_name: crowdpinion-db-backups
   image: kartoza/pg-backup:9.6
   hostname: pg-backups
   volumes:
@@ -75,6 +79,7 @@ dbbackups:
 
 # This is normally the main entry point for a production server
 web:
+  container_name: crowdpinion-web
   image: nginx
   hostname: nginx
   volumes:
@@ -93,6 +98,7 @@ web:
 # Run with --no-deps to run attached to the services
 # from produ environment if wanted
 devweb:
+  container_name: crowdpinion-dev-web
   build: docker
   dockerfile: Dockerfile-dev
   hostname: uwsgi
