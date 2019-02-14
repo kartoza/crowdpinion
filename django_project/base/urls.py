@@ -4,7 +4,8 @@ from django.conf.urls import url
 from .api_views.get_answers import GetAnswers
 from .api_views.add_answer import AddAnswer
 from .views import Home, custom_404
-from .views.question import QuestionCreateView, ResultsView, AnswerView
+from .views.question import (
+    QuestionCreateView, ResultsView, AnswerView, AnswersAsTextView)
 
 urlpatterns = [
     # basic app views
@@ -17,6 +18,9 @@ urlpatterns = [
     url(regex=r'^results/(?P<unique_id>[\w-]+)/$',
         view=ResultsView.as_view(),
         name='results'),
+    url(regex=r'^(?P<unique_id>[\w-]+)/$',
+        view=AnswerAsTextView.as_view(),
+        name='answers-as-text'),
     url(regex=r'^(?P<unique_id>[\w-]+)/$',
         view=AnswerView.as_view(),
         name='answers'),
