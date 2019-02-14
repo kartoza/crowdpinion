@@ -18,6 +18,7 @@
     <center><div class="answer-wrapper">
 
     </div></center>
+	<center><div><a href="{% url "results" questionnaire.unique_id %}">See All Results</a></div></center>
     <script>
         var answerUrl = '{% url 'add-answers' question_id %}';
         var csrfToken = '{{ csrf_token }}';
