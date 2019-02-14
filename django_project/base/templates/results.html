@@ -18,7 +18,9 @@
     {% endif %}
     <div class="info">
         <center><h3>Ask your crowd to go here to share their thoughts:</h3></center>
-        <center><h5><a href="{{ current_site }}">{{ current_site }}</a></h5></center>
+        <center><div class="jumbotron">
+		<a href="{{ current_site }}">{{ current_site }}</a>
+		</div></center>
 
         <center><h3>Your question:</h3></center>
         <center><h2>{{ questionnaire.question }}</h2></center>
