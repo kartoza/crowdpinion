@@ -24,9 +24,9 @@ def handler500(request):
     """
     # You need to create a 500.html template.
     t = loader.get_template('500.html')
-    return HttpResponseServerError(t.render(Context({
+    return HttpResponseServerError(t.render({
         'request': request,
-    })))
+    }))
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

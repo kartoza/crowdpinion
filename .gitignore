@@ -107,6 +107,7 @@ venv.bak/
 .idea/
 deployment/btsync-db.env
 deployment/btsync-media.env
+deployment/static
 **/logs
 django_project/.pycharm_helpers/
 secret.py
