@@ -63,7 +63,7 @@ class AnswersAsTextView(TemplateView):
     template_name = 'answers_as_text.txt'
 
     def get_context_data(self, **kwargs):
-        context = super(AnswerView, self).get_context_data(**kwargs)
+        context = super(AnswerAsTextView, self).get_context_data(**kwargs)
         unique_id = kwargs.pop('unique_id')
         try:
             question = Questionnaire.objects.get(unique_id=unique_id)
