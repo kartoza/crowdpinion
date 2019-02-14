@@ -1,4 +1,0 @@
-172.17.0.1 - - [09/Jan/2019:13:52:36 +0000] "GET / HTTP/1.1" 500 32 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15"
-172.17.0.1 - - [09/Jan/2019:13:52:36 +0000] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 500 32 "-" "Safari/14606.3.4 CFNetwork/976 Darwin/18.2.0 (x86_64)"
-172.17.0.1 - - [09/Jan/2019:13:52:36 +0000] "GET /apple-touch-icon.png HTTP/1.1" 500 32 "-" "Safari/14606.3.4 CFNetwork/976 Darwin/18.2.0 (x86_64)"
-172.17.0.1 - - [09/Jan/2019:13:52:36 +0000] "GET /favicon.ico HTTP/1.1" 500 32 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15"
