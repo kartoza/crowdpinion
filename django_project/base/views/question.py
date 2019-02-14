@@ -79,7 +79,7 @@ class AnswersAsTextView(TemplateView):
         unique_id = kwargs.pop('unique_id')
         try:
             question = Questionnaire.objects.get(unique_id=unique_id)
-            context['answers'] = question.answers.split(',')
+            context['answers'] = question.answers.split(', ')
         except:
             context['answers'] = 'No questions asked here.'
         return context
