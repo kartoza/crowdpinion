@@ -1,4 +1,0 @@
-{% for answer in answers %}
-{{ answer }}\n
-{% endfor %}
-

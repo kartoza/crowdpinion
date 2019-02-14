@@ -61,15 +61,18 @@ class AnswerView(TemplateView):
 class AnswersAsTextView(TemplateView):
     """View for answers as plain text."""
 
-    template_name = 'answers_as_text.txt'
-
     # Override the TemplateView get method so it returns the file download
     def get(self, request, *args, **kwargs):
         # Create the HttpResponse object with the appropriate CSV header.
-        response = HttpResponse(content_type='text/csv')
-        response['Content-Disposition'] = 'attachment; filename="answers.txt"'
         context = self.get_context_data(**kwargs)
-        return self.render_to_response(context)
+        content = ''
+        for line in context['answers']:
+            content += '%s\n' % line
+        response = HttpResponse(content, content_type='text/plain')
+        response['Content-Disposition'] = (
+            'attachment; filename="answers.txt"' )
+        return response
+
 
     def get_context_data(self, **kwargs):
         context = super(AnswersAsTextView, self).get_context_data(**kwargs)
