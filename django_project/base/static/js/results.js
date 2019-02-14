@@ -17,7 +17,7 @@ $(document).ready(function () {
         },
         complete: function() {
           // Schedule the next request when the current one's complete
-          setTimeout(worker, 3000);
+          setTimeout(worker, 1000);
         }
       });
     })();

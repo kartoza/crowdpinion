@@ -19,3 +19,14 @@ function addAnswer() {
         })
     }
 }
+
+// When user hit enter it'll call add answer function instead of giving 405.
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode === 13) {
+      event.preventDefault();
+      addAnswer();
+      return false;
+    }
+  });
+});
