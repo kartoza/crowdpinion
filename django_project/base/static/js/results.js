@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.message-banner').fadeOut(3000);
+    $('.message-banner').fadeOut(2000);
 
     (function worker() {
       $.ajax({

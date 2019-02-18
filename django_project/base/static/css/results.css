@@ -3,6 +3,14 @@
 }
 
 .message-banner {
+    z-index: 10000;
+    margin-top: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid green;
+    background-color: rgba(145, 216, 171, 1);
 }
 
 .answers-collected {
