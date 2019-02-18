@@ -42,6 +42,21 @@ class ResultsView(DetailView):
         return context
 
 
+class QuestionsView(TemplateView):
+    """List of all for questions."""
+
+    template_name = 'all_questions.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(QuestionsView, self).get_context_data(**kwargs)
+        try:
+            question = Questionnaire.objects.all()
+            context['questions'] = question
+        except:
+            context['questions'] = 'No questions asked yet!'
+        return context
+
+
 class AnswerView(TemplateView):
     """View for participants where they can submit answers."""
 
@@ -57,6 +72,7 @@ class AnswerView(TemplateView):
             context['question'] = 'No questions asked here.'
         context['question_id'] = unique_id
         return context
+
 
 class AnswersAsTextView(TemplateView):
     """View for answers as plain text."""
