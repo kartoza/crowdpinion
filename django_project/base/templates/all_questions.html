@@ -17,18 +17,18 @@
         </div>
     {% endif %}
     <div class="info">
-        <center><h3></h3></center>
         <center><div class="jumbotron">
-		<h2 class="display-4">
+		<h3 class="display-4">
             Here are all the questions that have been asked. Click on one to add an answer.
-		</h2>
-            <h2><a href="{{ current_site }}">Or...ask a new question</a></h2>
+		</h3>
+            <h3 class="link"><a href="{{ current_site }}">Or...ask a new question</a></h3>
 		</div></center>
 
-        {% for question in questions %}
-
-        <h2><a href="{% url "answers" question.unique_id %}">{{ question.unique_id }} : {{ question.question }}</a></h2>
-        {% endfor %}
+        <div class="item-container">
+            {% for question in questions %}
+            <div class="item-wrapper"><a href="{% url "answers" question.unique_id %}">{{ question.unique_id }} : {{ question.question }}</a></div>
+            {% endfor %}
+        </div>
 
     </div>
     <div class="result-items"></div>

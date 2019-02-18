@@ -13,8 +13,23 @@
     display: inline-block;
     padding: 10px 15px;
     font-size: 16pt;
-    border: 1px solid cadetblue;
+    border: 1px solid darkgrey;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 3px;
     background-color: #f5f5f5;
+}
+
+.item-wrapper {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid darkgrey;
+    margin: 5px;
+    font-size: 16pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.item-wrapper:hover {
+    -ms-transform: translate(2px,-2px); /* IE 9 */
+    -webkit-transform: translate(2px,-2px); /* Safari */
+    transform: translate(2px,-2px); /* Standard syntax */
 }
