@@ -35,7 +35,10 @@
         <a class="navbar-brand" href="{% url 'home' %}">
             <span class="fa fa-home"></span>
         </a>
-        <div class="nav navbar-nav" style="padding: 12px"><input style="padding: 1px 10px" type="text" id="question-id" placeholder="input unique question ID"><button type="button" style="margin-left: 10px" onclick="goToQuestions()">Go</button></div>
+        <div class="nav navbar-nav" style="padding: 12px">
+            <input style="padding: 1px 10px" type="text" id="question-id" placeholder="input unique question ID"><button type="button" style="margin-left: 10px" onclick="goToQuestion()">Go</button>
+            <button type="button" style="margin-left: 10px" onclick="goToQuestions()">View all questions</button></div>
+
     </div>
 </nav>
 <div id="container" class="container">
@@ -59,11 +62,15 @@
 {% block inline-js %}{% endblock %}
 
 <script>
-    function goToQuestions() {
+    function goToQuestion() {
         var question_id = $('#question-id').val();
         if(question_id !== ''){
-            window.open('/' + question_id, '_blank')
+            window.open('/' + question_id, '_self')
         }
+    }
+    function goToQuestions() {
+        window.open('/all-questions/','_self')
+
     }
 </script>
 </body>
