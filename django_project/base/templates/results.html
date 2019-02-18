@@ -26,13 +26,13 @@
 
         <center><h3>Your question:</h3></center>
         <center><h2>{{ questionnaire.question }}</h2></center>
-        <center><h3>Answers collected:</h3></center>
+        <center><h3 style="margin-top: 30px">Answers collected:</h3></center>
+        <center><div class="link"><a href="{% url "answers-as-text" questionnaire.unique_id %}">Download Results</a></div></center>
 
         <center><div class="answers-collected"></div></center>
 
     </div>
     <div class="result-items"></div>
-	<center><div><a href="{% url "answers-as-text" questionnaire.unique_id %}">Download Results</a></div></center>
 
     <script>
         var getAnswerUrl = '{% url "get-answers" questionnaire.unique_id %}'

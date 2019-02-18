@@ -8,11 +8,12 @@ input[name=question], input[name=answer] {
 }
 
 .answer-wrapper {
-    margin-top: 50px;
+    margin-top: 15px
 }
 
 .btn-submit {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .answer-item {

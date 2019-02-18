@@ -1,0 +1,73 @@
+.btn {
+    font-size: 100%;
+    padding: 0.9rem 2rem;
+    transition: 0.3s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.red-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    line-height: 1;
+    margin: 10px;
+    color: white;
+    border: 2px solid #910400;
+    background-color: rgb(150, 5, 0);
+}
+
+.red-btn:hover {
+    background: #dd3733;
+    border: 2px solid #dd3733;
+    color: #fff;
+}
+
+.nav-menu a, .link a {
+    padding: 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.link a {
+    color: rgba(100, 161, 157, 0.6);
+}
+
+.nav-menu a:hover {
+    color: black;
+    border-bottom: 2px solid orangered;
+}
+
+.link a:hover {
+    color: black;
+    border-bottom: 2px solid #64a19d;
+}
+
+.navbar-brand {
+    height: auto;
+    line-height: 30pt;
+    font-size: 30pt;
+}
+
+.btn-search {
+    margin-left: 3px;
+    margin-top: -1px;
+    padding: 3px 10px;
+}
+
+.body-content {
+    margin-bottom: 60px;
+}

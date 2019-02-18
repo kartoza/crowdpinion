@@ -15,10 +15,9 @@
             <center><input class="btn btn-danger btn-submit" type="button" value="Submit!" onclick="addAnswer(); return false"></center>
         </form>
     </div>
-    <center><div class="answer-wrapper">
 
-    </div></center>
-	<center><div><a href="{% url "results" question_id %}">See All Results</a></div></center>
+    <center><div class="link"><a href="{% url "results" question_id %}">See All Results</a></div></center>
+    <center><div class="answer-wrapper"></div></center>
     <script>
         var answerUrl = '{% url 'add-answers' question_id %}';
         var csrfToken = '{{ csrf_token }}';

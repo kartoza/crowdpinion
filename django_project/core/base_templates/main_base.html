@@ -11,8 +11,10 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">#}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/5.0.5/css/grayscale.css">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -30,16 +32,17 @@
 </head>
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-light navbar-fixed-top" role="navigation">
     <div class="navbar-header">
         <a class="navbar-brand" href="{% url 'home' %}">
             <span class="fa fa-home"></span>
         </a>
-        <div class="nav navbar-nav" style="padding: 12px">
-            <input style="padding: 1px 10px" type="text" id="question-id" placeholder="input unique question ID"><button type="button" style="margin-left: 10px" onclick="goToQuestion()">Go</button>
-            <button type="button" style="margin-left: 10px" onclick="goToQuestions()">View all questions</button></div>
 
+        <div class="nav navbar-nav" style="padding: 12px; margin-top: 10px;">
+            <input style="padding: 1px 10px; line-height: 20px" type="text" id="question-id" placeholder="input question ID"><button type="button" class="btn btn-primary btn-search" onclick="goToQuestion()">Go</button>
+        </div>
     </div>
+    <div class="nav nav-menu" style="padding: 15px; float: right"><a href="{% url 'all-questions' %}">See what others have asked here!</a></div>
 </nav>
 <div id="container" class="container">
     <div class="body-content">
