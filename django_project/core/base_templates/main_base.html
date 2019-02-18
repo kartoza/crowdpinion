@@ -30,6 +30,14 @@
 </head>
 
 <body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <span class="fa fa-home"></span>
+        </a>
+        <div class="nav navbar-nav" style="padding: 12px"><input style="padding: 1px 10px" type="text" id="question-id" placeholder="input unique question ID"><button type="button" style="margin-left: 10px" onclick="goToQuestions()">Go</button></div>
+    </div>
+</nav>
 <div id="container" class="container">
     <div class="body-content">
         {% block content %}{% endblock content %}
@@ -49,5 +57,14 @@
 </div>
 
 {% block inline-js %}{% endblock %}
+
+<script>
+    function goToQuestions() {
+        var question_id = $('#question-id').val();
+        if(question_id !== ''){
+            window.open('/' + question_id, '_blank')
+        }
+    }
+</script>
 </body>
 </html>
